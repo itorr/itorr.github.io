@@ -116,8 +116,11 @@ setTimeout(function(){
 var 
 ROOT,
 pop=function(){
-	ROOT=de(location.hash.substr(2))
-
+	try{
+		ROOT=de(location.hash.substr(2))
+	}catch(e){
+		return location.hash='#/home'
+	}
 	if(!ROOT||ROOT=='home'||!ROOT.match(/\.md$/))
 		return getHome()
 	else
