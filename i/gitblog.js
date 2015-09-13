@@ -72,21 +72,22 @@ listLoad=function(){
 },
 getHome=function(){
 	body.setAttribute('step','home');
+	document.title=$('h1').innerHTML;
 },
 postShow=function(url){
 	body.setAttribute('step','article');
 	$.x('markdown/'+url,function(text){
-		document.titl=text.match(/$.+?(?=\n)/);
-		MD('.article',{
-			text:_md2html(text),
-			size:text.length
+		document.title=text.match(/$.+?(?=\n)/);
+		$.j('http://front.dog/smartisan/i/md.js',function(){
+			MD('.article',{
+				text:_md2html(text),
+				size:text.length
+			})	
 		})
 	},getHome);
 }
 
 $.j('http://1.mouto.org/x.js');
-
-
 
 
 /* 配置项预处理 */
