@@ -1,6 +1,6 @@
 #妹 Blog - GitHub Pages 特别版
 
-![GitBlog](http://ww4.sinaimg.cn/large/a15b4afegw1ew1dr2td51g20m80b4glv)
+http://ww4.sinaimg.cn/large/a15b4afegw1ew1dr2td51g20m80b4glv
 
 #这是一个**无需生成器**的静态 GitHub 博客！
 ##Git 地址：https://github.com/itorr/itorr.github.io
