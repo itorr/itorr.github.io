@@ -45,7 +45,7 @@ listUpdata=function(_posts){
 	var i=0,o
 	while(o=_posts[i++])
 		posts.push({
-			url:o.name,
+			url:o.html_url,
 			title:o.name.replace(/\.md$/,''),
 			size:o.size
 		})
