@@ -1,9 +1,17 @@
+/*
+ * ✒️ 妹 Blog - GitHub Pages 特别版
+ * @卜卜口<http://github.com/itorr>
+ * 2015-09-14 凌晨
+ */
+
 var 
 GitBlog=function($,W){
 
 
 var 
 body=document.body,
+en=encodeURIComponent,
+de=decodeURIComponent,
 getM=function(X){
 	return function(xid){
 		if(X[xid])
@@ -20,13 +28,7 @@ MD=function(name,data,antic){
 		antic=function(i){return i}
 
 	$(name).innerHTML=Mustache.render(templet,antic(data));
-};
-
-
-
-var 
-en=encodeURIComponent,
-de=decodeURIComponent,
+},
 listCache=function(){
 	var 
 	posts=localStorage['posts']
@@ -67,9 +69,7 @@ listLoaded=0,
 listLoad=function(){
 	listLoaded=1,
 	$.j('https://api.github.com/repos/'+gitConfig.url+'/contents/markdown?callback=GitBlog.listUpdata')
-};
-
-var 
+},
 getHome=function(){
 	body.setAttribute('step','home');
 },
@@ -84,11 +84,7 @@ postShow=function(url){
 	},getHome);
 }
 
-
-
-//$.j('http://1.mouto.org/x.js');
-
-
+$.j('http://1.mouto.org/x.js');
 
 
 
@@ -99,8 +95,6 @@ if(!gitConfig.ssh)
 	return console.error('请设置 gitConfig.ssh 地址');
 
 gitConfig.url=gitConfig.ssh.match(/\w+\/\w+\.github\.io/i)+''
-
-
 
 
 
