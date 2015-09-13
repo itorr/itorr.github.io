@@ -4,9 +4,6 @@ http://ww4.sinaimg.cn/large/a15b4afegw1ew1dr2td51g20m80b4glv
 
 >这是一个**无需生成器**的静态 GitHub 博客！
 
-
-##Git 地址：https://github.com/itorr/itorr.github.io
-
 因 `GitHub Pages` 只能托管静态内容，所以以往搭建在 GitHub 上的博客程序多是通过客户端生成 HTML 之后，再同步到 GitHub Pages 上实现的博客功能。妹 Blog 通过 `GitHub HTTP API` 实现了无需客户端转义的纯 MarkDown 博客程序。
 
 1. 相比同类 Github 静态博客更快的展示速度
