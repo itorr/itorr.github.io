@@ -9,7 +9,7 @@ getM=function(X){
 		if(X[xid])
 			return X[xid];
 
-		return X[xid]=$('xmp[xid="'+xid+'"],.'+xid+' xmp,'+xid+' xmp').innerHTML;
+		return X[xid]=$(xid+' xmp').innerHTML;
 	}
 }({}),
 MD=function(name,data,antic){
