@@ -15,26 +15,26 @@ de=decodeURIComponent,
 getM=function(X){
 	return function(xid){
 		if(X[xid])
-			return X[xid];
+			return X[xid]
 
-		return X[xid]=$('xmp[xid="'+xid+'"],'+xid+' xmp').innerHTML;
+		return X[xid]=$('xmp[xid="'+xid+'"],'+xid+' xmp').innerHTML
 	}
 }({}),
 MD=function(name,data,antic){
 	var 
-	templet=getM(name);
+	templet=getM(name)
 
 	if(!antic)
 		antic=function(i){return i}
 
-	$(name).innerHTML=Mustache.render(templet,antic(data));
+	$(name).innerHTML=Mustache.render(templet,antic(data))
 },
 listCache=function(){
 	var 
 	posts=localStorage['posts']
 
 	if(!posts)
-		return listLoad();
+		return listLoad()
 
 	posts=JSON.parse(posts)
 
@@ -60,7 +60,7 @@ listUpdata=function(_posts){
 },
 listShow=function(posts){
 
-	MD('section',posts);
+	MD('section',posts)
 
 	if(!listLoaded)
 		setTimeout(listLoad,1e3)
@@ -71,25 +71,25 @@ listLoad=function(){
 	$.j('https://api.github.com/repos/'+gitConfig.url+'/contents/markdown?callback=GitBlog.listUpdata')
 },
 getHome=function(){
-	body.setAttribute('step','home');
-	document.title=$('h1 a,h1').innerHTML;
+	body.setAttribute('step','home')
+	document.title=$('h1 a,h1').innerHTML
 },
 postShow=function(url){
-	body.setAttribute('step','article');
+	body.setAttribute('step','article')
 
 	MD('.article',{
 		text:'<h1>😋😠😪😇</h1>',
 		size:'233'
 	})	
 	$.x('markdown/'+url,function(text){
-		document.title=text.match(/^.+?(?=\n)/);
+		document.title=text.match(/^.+?(?=\n)/)
 		$.j('http://front.dog/smartisan/i/md.js',function(){
 			MD('.article',{
 				text:_md2html(text),
 				size:Math.floor(text.length/2)
 			})	
 		})
-	},getHome);
+	},getHome)
 }
 
 
@@ -98,7 +98,7 @@ postShow=function(url){
 /* 配置项预处理 */
 
 if(!gitConfig.ssh)
-	return console.error('请设置 gitConfig.ssh 地址');
+	return console.error('请设置 gitConfig.ssh 地址')
 
 gitConfig.url=gitConfig.ssh.match(/\w+\/\w+\.github\.io/i)+''
 
@@ -106,9 +106,9 @@ gitConfig.url=gitConfig.ssh.match(/\w+\/\w+\.github\.io/i)+''
 
 setTimeout(function(){
 	$.j('http://sojo.im/base/fastclick.m.js',function(){
-		FastClick.attach(document.body);
-	});
-	$.j('http://1.mouto.org/x.js');
+		FastClick.attach(document.body)
+	})
+	$.j('http://1.mouto.org/x.js')
 },1e3)
 
 
@@ -121,19 +121,19 @@ pop=function(){
 		return getHome()
 	else
 		return postShow(ROOT)
-};
+}
 
-W.onhashchange=pop;
+W.onhashchange=pop
 
-pop();
+pop()
 
-listCache();
+listCache()
 
 return {
 	listUpdata:listUpdata
 }
 
-}(iTorr,this);
+}(iTorr,this)
 
 
-// git add -A;git commit -m "欢迎使用 GitBlog";git push
+// git add -Agit commit -m "欢迎使用 GitBlog"git push
