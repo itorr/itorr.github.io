@@ -81,7 +81,7 @@ postShow=function(url){
 			text:text,
 			size:text.length
 		})
-	})
+	},getHome);
 }
 
 
@@ -116,7 +116,7 @@ ROOT,
 pop=function(){
 	ROOT=de(location.hash.substr(2))
 
-	if(ROOT=='home')
+	if(ROOT=='home'||!ROOT.match(/\.md$/))
 		return getHome()
 	else
 		return postShow(ROOT)
