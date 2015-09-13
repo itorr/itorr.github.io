@@ -82,7 +82,7 @@ postShow=function(url){
 		size:'233'
 	})	
 	$.x('markdown/'+url,function(text){
-		document.title=text.match(/$.+?(?=\n)/);
+		document.title=text.match(/^.+?(?=\n)/);
 		$.j('http://front.dog/smartisan/i/md.js',function(){
 			MD('.article',{
 				text:_md2html(text),
