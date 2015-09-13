@@ -87,7 +87,7 @@ postShow=function(url){
 		$.j('http://front.dog/smartisan/i/md.js',function(){
 			MD('.article',{
 				text:_md2html(text),
-				size:Math.floor(text.length/2)
+				size:text.length
 			})	
 		})
 	},getHome)
