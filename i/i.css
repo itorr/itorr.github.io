@@ -142,6 +142,14 @@ body[step="home"] .article{
 	padding:.5em .7em;
 	background:#23241f;color:#f8f8f2;
 }
+
+.text code{
+	background: #333;
+	color: #FFF;
+	padding: .2em .3em;
+	border-radius: .3em;
+	text-shadow:0 1px 0 #000;
+}
 /*.article ul{padding-left:2em;list-style-type:disc;}*/
 
 .text blockquote{
@@ -149,12 +157,13 @@ body[step="home"] .article{
 	line-height:1.5;
 	background:#fbf3eb;
 	color:#a8988e;
-	margin:.2em;
+	margin:1em .2em;
 	padding:1.2em 1.5em;
 
 }
 .text blockquote p{
 	text-indent:0;
+	margin:0;
 }
 
 .text ul li:after{
