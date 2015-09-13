@@ -1,0 +1,64 @@
+
+body{
+	margin:0 auto;
+	max-width:40em;
+}
+
+xmp{
+	color:#DDD;
+}
+
+header{
+	text-align:center;
+	padding:3em 0;
+}
+header h1{
+	font-size:3em;
+	margin:0;
+}
+header h1 a{
+	color:#222;
+	text-decoration:none;
+}
+header p{
+	color:#999;
+	margin:0;
+}
+section{
+	counter-reset:article-num;
+}
+article{
+	padding:1em 0;
+}
+section article{
+	line-height:34px;
+}
+article h3{
+	margin:0 4em 0 3em;
+}
+article .num{
+	float:left;
+	width:3em;
+	text-align:right;
+	color:#999;
+	counter-increment:article-num;
+}
+article .num:before{
+	content:counter(article-num);
+}
+article .num:after{
+	content:'. ';
+}
+article .size{
+	float:right;
+	color:#999;
+}
+article .size:after{
+	content:' 字';
+}
+
+footer{
+	color:#999;
+	padding:3em 0;
+	text-align:center;
+}

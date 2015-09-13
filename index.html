@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<title>1t0r2</title>
+<title>文档仓库</title>
+<link rel="stylesheet" href="i/i.css">
 
 
 
-git add -A;git commit -m "添加域名解析";git push
+<header>
+	<h1><a href="#/home">文档仓库</a></h1>
+	<p>妹 Blog - GitHub Pages 特别版</p>
+</header>
+<section>
+	<xmp>
+	{{#.}}
+	<article>
+		<span class="num"></span>
+		<span class="size">{{size}}</span>
+		<h3><a href="#/{{url}}">{{title}}</a></h3>
+	</article>
+	{{/.}}
+	</xmp>
+</section>
+<footer>✒️ 依托 GitHub Pages 搭建</footer>
+<script>
+var
+gitConfig={
+	ssh:'git@github.com:itorr/itorr.github.io.git'
+}
+</script>
+<script src="i/itorr2.js"></script>
+<script src="http://sojo.im/base/mustache.js"></script>
+<script src="i/gitblog.js"></script>
