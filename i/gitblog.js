@@ -51,7 +51,7 @@ listUpdata=function(_posts){
 		posts.push({
 			url:o.name,//o.html_url,
 			title:o.name.replace(/\.md$/,''),
-			size:o.size
+			size:Math.floor(o.size/2)
 		})
 
 	localStorage['posts']=JSON.stringify(posts)
