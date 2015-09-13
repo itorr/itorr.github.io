@@ -38,29 +38,27 @@ header p{
 section{
 	counter-reset:article-num;
 }
-article{
-	padding:1em 0;
-}
 section article{
+	padding:1em 0;
 	line-height:34px;
 }
-article h3{
+section article h3{
 	margin:0 4em 0 3em;
 }
-article .num{
+section article .num{
 	float:left;
 	width:3em;
 	text-align:right;
 	color:#999;
 	counter-increment:article-num;
 }
-article .num:before{
+section article .num:before{
 	content:counter(article-num);
 }
-article .num:after{
+section article .num:after{
 	content:'. ';
 }
-article .size{
+section article .size{
 	float:right;
 	color:#999;
 }
