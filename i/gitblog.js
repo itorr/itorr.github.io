@@ -116,7 +116,7 @@ ROOT,
 pop=function(){
 	ROOT=de(location.hash.substr(2))
 
-	if(ROOT=='home'||!ROOT.match(/\.md$/))
+	if(!ROOT||ROOT=='home'||!ROOT.match(/\.md$/))
 		return getHome()
 	else
 		return postShow(ROOT)
