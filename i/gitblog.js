@@ -72,7 +72,7 @@ listLoad=function(){
 },
 getHome=function(){
 	body.setAttribute('step','home');
-	document.title=$('h1').innerHTML;
+	document.title=$('h1 a').innerHTML;
 },
 postShow=function(url){
 	body.setAttribute('step','article');
