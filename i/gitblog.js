@@ -9,7 +9,7 @@ getM=function(X){
 		if(X[xid])
 			return X[xid];
 
-		return X[xid]=$(xid+' xmp').innerHTML;
+		return X[xid]=$('xmp[xid="'+xid+'"],'+xid+' xmp').innerHTML;
 	}
 }({}),
 MD=function(name,data,antic){
@@ -78,7 +78,7 @@ postShow=function(url){
 	$.x('markdown/'+url,function(text){
 		document.titl=text.match(/$.+?(?=\n)/);
 		MD('.article',{
-			text:text,
+			text:_md2html(text),
 			size:text.length
 		})
 	},getHome);
