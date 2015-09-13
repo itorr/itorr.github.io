@@ -1,3 +1,14 @@
+html{font:1em "Avenir Next",Avenir,"Helvetica Neue",Helvetica,"Lantinghei SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑", "STHeiti","WenQuanYi Micro Hei",SimSun,sans-serif;color:#222;}
+
+
+textarea,input,option,select,button{font:inherit;}
+
+.h{opacity:0;pointer-events:none;}
+
+a,input,button{transition:.3s ease;}
+
+
+
 
 body{
 	margin:0 auto;
@@ -87,7 +98,10 @@ body[step="home"] .article{
 
 
 
-
+.text{
+	max-width:40em;
+	margin:0 auto;
+}
 
 .text img{
 	display:block;
