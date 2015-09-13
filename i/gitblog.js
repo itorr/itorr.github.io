@@ -1,8 +1,9 @@
 var 
-GitBlog=function($){
+GitBlog=function($,W){
 
 
 var 
+body=document.body,
 getM=function(X){
 	return function(xid){
 		if(X[xid])
@@ -25,12 +26,13 @@ MD=function(name,data,antic){
 
 var 
 en=encodeURIComponent,
+de=decodeURIComponent,
 listCache=function(){
 	var 
 	posts=localStorage['posts']
 
 	if(!posts)
-		return lostLoad();
+		return listLoad();
 
 	posts=JSON.parse(posts)
 
@@ -45,7 +47,7 @@ listUpdata=function(_posts){
 	var i=0,o
 	while(o=_posts[i++])
 		posts.push({
-			url:o.html_url,
+			url:o.name,//o.html_url,
 			title:o.name.replace(/\.md$/,''),
 			size:o.size
 		})
@@ -58,15 +60,29 @@ listShow=function(posts){
 
 	MD('section',posts);
 
-	if(!loadJson)
-		setTimeout(lostLoad,1e3)
+	if(!listLoaded)
+		setTimeout(listLoad,1e3)
 },
-loadJson=0,
-lostLoad=function(){
-	loadJson=1,
+listLoaded=0,
+listLoad=function(){
+	listLoaded=1,
 	$.j('https://api.github.com/repos/'+gitConfig.url+'/contents/markdown?callback=GitBlog.listUpdata')
 };
 
+var 
+getHome=function(){
+	body.setAttribute('step','home');
+},
+postShow=function(url){
+	body.setAttribute('step','article');
+	$.x('markdown/'+url,function(text){
+		document.titl=text.match(/$.+?(?=\n)/);
+		MD('.article',{
+			text:text,
+			size:text.length
+		})
+	})
+}
 
 
 
@@ -95,6 +111,20 @@ setTimeout(function(){
 },1e3)
 
 
+var 
+ROOT,
+pop=function(){
+	ROOT=de(location.hash.substr(2))
+
+	if(ROOT=='home')
+		return getHome()
+	else
+		return postShow(ROOT)
+};
+
+W.onhashchange=pop;
+
+pop();
 
 listCache();
 
@@ -102,7 +132,7 @@ return {
 	listUpdata:listUpdata
 }
 
-}(iTorr);
+}(iTorr,this);
 
 
 // git add -A;git commit -m "欢迎使用 GitBlog";git push

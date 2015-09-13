@@ -15,11 +15,17 @@
 	<article>
 		<span class="num"></span>
 		<span class="size">{{size}}</span>
-		<h3><a href="{{url}}" target="md">{{title}}</a></h3>
+		<h3><a href="#/{{url}}">{{title}}</a></h3>
 	</article>
 	{{/.}}
 	</xmp>
 </section>
+<article class="article">
+	<xmp>
+	<div clas="text">{{text}}</div>
+	<span class="size">{{size}}</span>
+	</xmp>
+</article>
 <footer>✒️ 依托 GitHub Pages 搭建</footer>
 <script>
 var
@@ -28,5 +34,6 @@ gitConfig={
 }
 </script>
 <script src="i/itorr2.js"></script>
-<script src="http://sojo.im/base/mustache.js"></script>
+<script src="http://front.dog/smartisan/i/md.js"></script>
+<script src="http://front.dog/smartisan/i/mustache.min.js"></script>
 <script src="i/gitblog.js"></script>
