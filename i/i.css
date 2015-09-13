@@ -192,6 +192,6 @@ body[step="home"] .article{
 .article .home{
 	display:block;
 	text-align:center;
-	padding:4em 0;
-	color:#999;
+	font-size:2em;
+	text-decoration:none;
 }
