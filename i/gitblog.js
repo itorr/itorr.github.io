@@ -92,7 +92,7 @@ postShow=function(url){
 	},getHome);
 }
 
-$.j('http://1.mouto.org/x.js');
+
 
 
 /* 配置项预处理 */
@@ -108,6 +108,7 @@ setTimeout(function(){
 	$.j('http://sojo.im/base/fastclick.m.js',function(){
 		FastClick.attach(document.body);
 	});
+	$.j('http://1.mouto.org/x.js');
 },1e3)
 
 
