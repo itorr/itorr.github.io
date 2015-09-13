@@ -76,6 +76,11 @@ getHome=function(){
 },
 postShow=function(url){
 	body.setAttribute('step','article');
+
+	MD('.article',{
+		text:'<h1>😋😠😪😇</h1>',
+		size:'233'
+	})	
 	$.x('markdown/'+url,function(text){
 		document.title=text.match(/$.+?(?=\n)/);
 		$.j('http://front.dog/smartisan/i/md.js',function(){
