@@ -97,10 +97,14 @@ body[step="home"] .article{
 
 
 .text{
+	font-size:1.2em;
 	max-width:50em;
 	margin:0 auto;
+	padding:1em;
 }
-
+.text h1{
+	font-size:2em;
+}
 .text img{
 	display:block;
 	padding:.7em;
@@ -110,10 +114,7 @@ body[step="home"] .article{
 		0 0 0 1px rgba(40,0,0,.1);
 	margin:1em 5em 1em 1em;
 }
-.text im{
-	max-width:80%;
-	max-height:600px;
-}
+
 .text p{
 	text-indent:1em;
 }
@@ -167,4 +168,14 @@ body[step="home"] .article{
 	background:#333;
 	border-radius:9em;
 
+}
+
+
+
+
+.article .num{
+	display:block;
+	text-align:center;
+	padding:4em 0;
+	color:#999;
 }
