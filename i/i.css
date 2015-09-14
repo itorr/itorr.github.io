@@ -82,7 +82,9 @@ footer{
 	text-align:center;
 }
 
-
+.article{
+	overflow-x:hidden;
+}
 
 html[step="home"] .article{
 	display:none;
