@@ -62,6 +62,12 @@ section article .size{
 	float:right;
 	color:#999;
 }
+@media(max-width:600px){
+	section article .size{
+		display:none;
+	}
+}
+
 article .size:after{
 	content:' 字';
 }
