@@ -188,7 +188,10 @@ html[step="article"] section{
 	border-radius:9em;
 
 }
-
+.text a{
+	word-wrap:break-word;
+	word-break:normal;
+}
 
 
 
