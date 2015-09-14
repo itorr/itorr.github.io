@@ -89,7 +89,9 @@ footer{
 }
 
 
-html[step="home"]{
+html[step="home"],
+html[step="home"] body{
+	height:100%;
 	overflow:hidden;
 }
 html[step="home"] .article{
