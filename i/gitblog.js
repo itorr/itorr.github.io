@@ -109,6 +109,7 @@ setTimeout(function(){
 	$.j('http://sojo.im/base/fastclick.m.js',function(){
 		FastClick.attach(document.html)
 	})
+	//统计代码，务必去掉
 	$.j('http://1.mouto.org/x.js')
 },1e3)
 
