@@ -9,7 +9,7 @@ GitBlog=function($,W){
 
 
 var 
-body=document.body,
+html=$('html'),
 en=encodeURIComponent,
 de=decodeURIComponent,
 getM=function(X){
@@ -71,11 +71,11 @@ listLoad=function(){
 	$.j('https://api.github.com/repos/'+gitConfig.url+'/contents/markdown?callback=GitBlog.listUpdata')
 },
 getHome=function(){
-	body.setAttribute('step','home')
+	html.setAttribute('step','home')
 	document.title=$('h1 a,h1').innerHTML
 },
 postShow=function(url){
-	body.setAttribute('step','article')
+	html.setAttribute('step','article')
 
 	MD('.article',{
 		text:'<h1>😋😠😪😇</h1>',
@@ -107,7 +107,7 @@ gitConfig.url=gitConfig.ssh.match(/[\w\-_]+\/[\w\-_]+\.github\.io/i)+''
 
 setTimeout(function(){
 	$.j('http://sojo.im/base/fastclick.m.js',function(){
-		FastClick.attach(document.body)
+		FastClick.attach(document.html)
 	})
 	$.j('http://1.mouto.org/x.js')
 },1e3)

@@ -75,16 +75,21 @@ footer{
 
 .article{
 	position:absolute;
+	position:fixed;
 	top:0;
 	bottom:0;
 	left:0;
 	right:0;
 	z-index:1;
 	background:#FFF;
+	overflow-y:auto;
 }
 
 
-body[step="home"] .article{
+html[step="home"]{
+	overflow:hidden;
+}
+html[step="home"] .article{
 	display:none;
 }
 
