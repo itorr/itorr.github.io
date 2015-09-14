@@ -140,4 +140,4 @@ return {
 }(iTorr,this)
 
 
-// git add -Agit commit -m "欢迎使用 GitBlog"git push
+// git add -A;git commit -m "修复 img 样式";git push
