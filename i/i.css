@@ -118,6 +118,9 @@ html[step="home"] .article{
 		0 1px 7px rgba(0,0,0,.1),
 		0 0 0 1px rgba(40,0,0,.1);
 	margin:1em 5em 1em 1em;
+
+	max-width:100%;
+	box-sizing:border-box;
 }
 
 .text p{
