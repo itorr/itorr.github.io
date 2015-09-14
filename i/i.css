@@ -73,31 +73,14 @@ footer{
 }
 
 
-.article{
-	position:absolute;
-	position:fixed;
-	top:0;
-	bottom:0;
-	left:0;
-	right:0;
-	z-index:1;
-	background:#FFF;
-
-	-webkit-overflow-scrolling:touch;
-	overflow-y:auto;
-	overflow-x:hidden;
-}
-
 
 html[step="home"] .article{
 	display:none;
 }
 
 
-html[step="article"],
-html[step="article"] body{
-	height:100%;
-	overflow:hidden;
+html[step="article"] section{
+	display:none;
 }
 
 
