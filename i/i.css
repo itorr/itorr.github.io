@@ -106,6 +106,8 @@ html[step="article"] section{
 	max-width:50em;
 	margin:0 auto;
 	padding:1em;
+	word-wrap:break-word;
+	word-break:normal;
 }
 .text h1{
 	font-size:2em;
