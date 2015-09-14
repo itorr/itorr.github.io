@@ -72,7 +72,7 @@ listLoad=function(){
 },
 getHome=function(){
 	html.setAttribute('step','home')
-	document.title=$('h1 a,h1').innerHTML
+	document.title=$('h1 a').innerHTML
 },
 postShow=function(url){
 	html.setAttribute('step','article')
