@@ -63,6 +63,10 @@ section article .size{
 	color:#999;
 }
 @media(max-width:600px){
+
+	section article h3{
+		margin:0 1em 0 3em;
+	}
 	section article .size{
 		display:none;
 	}
