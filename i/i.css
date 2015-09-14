@@ -82,9 +82,10 @@ footer{
 	right:0;
 	z-index:1;
 	background:#FFF;
-	
+
 	-webkit-overflow-scrolling:touch;
 	overflow-y:auto;
+	overflow-x:hidden;
 }
 
 
