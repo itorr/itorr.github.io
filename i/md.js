@@ -616,7 +616,7 @@ if(typeof exports==="object"&&typeof require==="function"){
 
 var 
 C=new MD.C(),
-_md2html=function(i){
+markdownToHtml=function(i){
 	//console.log(i);
 	i=i.replace(/```(|[\w]+)[\r\n]+([\W.\S]*?)```/mg,function(i,a,b){
 		return '<pre><code class="'+a+'">'+b.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/\'/g,"&#39;").replace(/\"/g,"&quot;")+'</code></pre>'

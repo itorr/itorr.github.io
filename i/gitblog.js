@@ -85,11 +85,10 @@ postShow=function(url){
 	console.log(url)
 	$.x('markdown/'+en(url),function(text){
 		document.title=text.match(/^.+?(?=\n)/)
-		$.j('i/md.js',function(){
-			MD('.article',{
-				text:_md2html(text),
-				size:text.length
-			})	
+		
+		MD('.article',{
+			text:markdownToHtml(text),
+			size:text.length
 		})
 	},getHome)
 }
