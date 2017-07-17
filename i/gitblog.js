@@ -27,7 +27,8 @@ MD=function(name,data,antic){
 	if(!antic)
 		antic=function(i){return i}
 
-	$(name).innerHTML=Mustache.render(templet,antic(data))
+	$(name).innerHTML=模板.运转(templet,antic(data))
+	// $(name).innerHTML=Mustache.render(templet,antic(data))
 },
 listCache=function(){
 	var 
@@ -60,7 +61,7 @@ listUpdata=function(_posts){
 },
 listShow=function(posts){
 
-	MD('section',posts)
+	MD('section',{posts:posts})
 
 	if(!listLoaded)
 		setTimeout(listLoad,1e3)
@@ -84,7 +85,7 @@ postShow=function(url){
 	console.log(url)
 	$.x('markdown/'+en(url),function(text){
 		document.title=text.match(/^.+?(?=\n)/)
-		$.j('http://front.dog/smartisan/i/md.js',function(){
+		$.j('i/md.js',function(){
 			MD('.article',{
 				text:_md2html(text),
 				size:text.length
@@ -106,11 +107,9 @@ gitConfig.url=gitConfig.ssh.match(/[\w\-_]+\/[\w\-_]+\.github\.io/i)+''
 
 
 setTimeout(function(){
-	$.j('http://sojo.im/base/fastclick.m.js',function(){
+	$.j('i/fastclick.js',function(){
 		FastClick.attach(document.html)
 	})
-	//统计代码，务必去掉
-	$.j('http://1.mouto.org/x.js')
 },1e3)
 
 
@@ -120,8 +119,9 @@ pop=function(){
 	try{
 		ROOT=de(location.hash.substr(2))
 	}catch(e){
-		return location.hash='#/home'
+		ROOT='home'
 	}
+
 	if(!ROOT||ROOT=='home'||!ROOT.match(/\.md$/))
 		return getHome()
 	else
@@ -139,6 +139,3 @@ return {
 }
 
 }(iTorr,this)
-
-
-// git add -A;git commit -m "修复 img 样式";git push

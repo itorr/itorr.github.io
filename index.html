@@ -9,18 +9,18 @@
 </header>
 <section>
 	<xmp>
-	{{#.}}
+	{{#posts}}
 	<article>
 		<span class="num"></span>
 		<span class="size">{{size}}</span>
 		<h3><a href="#/{{url}}">{{title}}</a></h3>
 	</article>
-	{{/.}}
+	{{/posts}}
 	</xmp>
 </section>
 <article class="article">
 	<xmp>
-	<div class="text">{{{text}}}</div>
+	<div class="text">{{&text}}</div>
 	<span class="size">{{size}}</span>
 	<a class="home" href="#/home">🏠 返回首页</a>
 	</xmp>
@@ -33,5 +33,6 @@ gitConfig={
 }
 </script>
 <script src="i/itorr2.js"></script>
-<script src="http://front.dog/smartisan/i/mustache.min.js"></script>
+<script src="i/md.js"></script>
+<script src="i/templet.js"></script>
 <script src="i/gitblog.js"></script>
