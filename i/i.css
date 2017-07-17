@@ -8,7 +8,10 @@ textarea,input,option,select,button{font:inherit;}
 a,input,button{transition:.3s ease;}
 
 
-
+a{
+	text-decoration:none;
+	color:#07F;
+}
 
 body{
 	margin:0 auto;
